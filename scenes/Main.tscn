@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
 
 [node name="Root" type="Node2D"]
 
@@ -12,3 +13,22 @@ position = Vector2( 789.149, 294.054 )
 
 [node name="Ground3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 225.95, 294.562 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 262, 187 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -15, 573, 1048, 576, 1048, 8, -40, 8, -40, -104, 1152, -104, 1152, 640, -16, 640 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
+color = Color( 0, 0.372549, 0.00392157, 1 )
+polygon = PoolVector2Array( -40, 8, 1040, 8, 1040, 576, -16, 576, -16, 648, 1152, 648, 1152, -96, -40, -96 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, -40, 0, 656, -104, 656, -104, -104, 0, -104 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D2"]
+color = Color( 0.0117647, 0.415686, 0.160784, 1 )
+polygon = PoolVector2Array( 0, -104, 0, 656, -104, 656, -104, -104 )
