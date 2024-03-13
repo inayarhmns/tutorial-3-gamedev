@@ -3,8 +3,8 @@ extends KinematicBody2D
 export (int) var speed = 400
 export (int) var GRAVITY = 1200
 onready var sprite = get_node("AnimatedSprite")
-onready var walkSound = $WalkSound
-onready var jumpSound = $JumpSound
+onready var walkSound = get_node("WalkSound")
+onready var jumpSound = get_node("JumpSound")
 const UP = Vector2(0,-1)
 export (int) var jump_speed = -400
 export var maxjump = 2

@@ -1,7 +1,7 @@
 extends Area2D
 
-onready var moneySound = $money
-onready var money_anim = $money_anim
+onready var moneySound = get_node("money")
+onready var money_anim = get_node("money_anim")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

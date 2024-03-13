@@ -1,6 +1,6 @@
 extends Area2D
 
-onready var animation = $AnimatedSprite
+onready var animation = get_node("AnimatedSprite")
 
 func _ready():
 	animation.play("static")
