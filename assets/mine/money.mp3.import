@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/money.mp3-6b35a02df7a0e0ba9ffe088bc71ed8ef.mp3str"
+
+[deps]
+
+source_file="res://assets/mine/money.mp3"
+dest_files=[ "res://.import/money.mp3-6b35a02df7a0e0ba9ffe088bc71ed8ef.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
